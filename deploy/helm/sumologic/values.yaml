@@ -423,6 +423,7 @@ fluentd:
           cpu: 1000m
         requests:
           memory: 768Mi
+          ## Warning! Increasing the CPU requests for Fluentd above 1000m will make HPA unusable
           cpu: 500m
       ## Option to define priorityClassName to assign a priority class to pods.
       priorityClassName:
@@ -712,6 +713,7 @@ fluentd:
           cpu: 1000m
         requests:
           memory: 768Mi
+          ## Warning! Increasing the CPU requests for Fluentd above 1000m will make HPA unusable
           cpu: 500m
       ## Option to define priorityClassName to assign a priority class to pods.
       priorityClassName:

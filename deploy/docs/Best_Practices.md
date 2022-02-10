@@ -195,6 +195,10 @@ To enable autoscaling for Fluentd:
         enabled: true
   ```
 
+**Warning!**  
+When enabling the Fluentd Autoscaling please make sure to not set Fluentd's CPU requests above `1000m` as that will
+break the autoscaling. The reason for that is Fluentd can use 1 CPU core at max.
+
 ## Fluentd File-Based Buffer
 
 Starting with `v2.0.0` we're using file-based buffer for Fluentd instead of less
